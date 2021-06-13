@@ -7,7 +7,7 @@ function start(){
 	const tl = init("160x600")
 	const time = .2
 	TweenLite.defaultEase = Power3.easeInOut
-	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Back.easeOut}, "+=.1")
+	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
 
 	tl.to("#holder", time, {x:"-=300"}, "+=.3")
 	tl.to("#holder", time, {x:"-=300"}, "+=2")
