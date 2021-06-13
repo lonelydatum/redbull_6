@@ -122,8 +122,8 @@ function start() {
 	var time = .2;
 	TweenLite.defaultEase = Power3.easeInOut;
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
-
-	tl.to("#holder", time, { x: "-=300" }, "+=.3");
+	// tl.from(".logo", time, {opacity:0, x:"+=50"}, "+=.1")
+	tl.to("#holder", time, { x: "-=300" }, "+=.1");
 	tl.to("#holder", time, { x: "-=300" }, "+=2");
 	tl.to("#holder", time, { x: "-=300" }, "+=4");
 }
