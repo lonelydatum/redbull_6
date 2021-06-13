@@ -1,0 +1,31 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+
+#banner{	
+	width: 300px;
+	height: 250px;
+	// overflow: visible;
+}
+
+
+.t1{
+	@include pos-scale(0, 0, .5);
+}
+
+.t2{
+	@include pos-scale(300, 0, .5);
+}
+
+.t3{
+	@include pos-scale(600, 0, .5);
+}
+
+
+#holder{
+	@include pos(300, 0);
+}
+
