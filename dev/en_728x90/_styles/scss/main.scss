@@ -1,0 +1,24 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+
+#banner{	
+	width: 728px;
+	height: 90px;
+	// overflow: visible;
+}
+
+.bg{
+	transform-origin: 50% 50%;
+}
+
+
+#mask{
+	width: 320px;
+	height: 90px;
+	overflow: hidden;
+	@include pos(0, 0);
+}
