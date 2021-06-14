@@ -272,4 +272,9 @@ svg.olg_logo polygon.tri {
   position: absolute;
 }
 
+.logo {
+  -webkit-filter: drop-shadow(0 0 17px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(0 0 17px rgba(255, 255, 255, 0.6));
+}
+
 /*# sourceMappingURL=main.css.map */

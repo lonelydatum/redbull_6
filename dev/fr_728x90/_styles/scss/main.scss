@@ -22,3 +22,7 @@
 	overflow: hidden;
 	@include pos(0, 0);
 }
+
+.logo{
+	filter: drop-shadow(0 0 17px rgba(255, 255, 255, 0.6));
+}
