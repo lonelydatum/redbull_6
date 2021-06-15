@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 var banner = document.getElementById('banner');
 var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
+var speed = .1;
+
 function init(id) {
 
 	var list = [".t1", ".t2", ".t3"];
@@ -24,7 +26,7 @@ function init(id) {
 	var w = size.w;
 	var h = size.h;
 
-	var time = .2;
+	var time = speed;
 	TweenLite.defaultEase = Power3.easeInOut;
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
 	var x = "-=" + size.w;
@@ -35,19 +37,9 @@ function init(id) {
 	return tl;
 }
 
-exports.size = size;
-exports.init = init;
+function size728() {
 
-// export {init}
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-var _commonJsCommonJs = require('../../_common/js/common.js');
-
-function init(id) {
-
-	var WIDTH = 140;
+	var WIDTH = 320;
 
 	var list = [".t1", ".t2", ".t3"];
 	list.map(function (item, i) {
@@ -55,16 +47,16 @@ function init(id) {
 	});
 
 	TweenLite.set("#holder", { x: WIDTH });
-	TweenLite.set(".bg", { x: "-" + _commonJsCommonJs.size.w / 2, y: "-" + _commonJsCommonJs.size.h / 2 });
+	TweenLite.set(".bg", { x: "-" + size.w / 2, y: "-" + size.h / 2 });
 
 	TweenLite.defaultEase = Power3.easeOut;
 	var tl = new TimelineMax();
 	tl.set(".frame1", { opacity: 1 });
 
-	var w = _commonJsCommonJs.size.w;
-	var h = _commonJsCommonJs.size.h;
+	var w = size.w;
+	var h = size.h;
 
-	var time = .2;
+	var time = speed;
 	TweenLite.defaultEase = Power3.easeInOut;
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
 	var x = "-=" + WIDTH;
@@ -75,7 +67,46 @@ function init(id) {
 	return tl;
 }
 
-init();
+function size320() {
+	var WIDTH = 140;
+
+	var list = [".t1", ".t2", ".t3"];
+	list.map(function (item, i) {
+		TweenLite.set(item, { x: i * WIDTH });
+	});
+
+	TweenLite.set("#holder", { x: WIDTH });
+	TweenLite.set(".bg", { x: "-" + size.w / 2, y: "-" + size.h / 2 });
+
+	TweenLite.defaultEase = Power3.easeOut;
+	var tl = new TimelineMax();
+	tl.set(".frame1", { opacity: 1 });
+
+	var w = size.w;
+	var h = size.h;
+
+	var time = speed;
+	TweenLite.defaultEase = Power3.easeInOut;
+	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
+	var x = "-=" + WIDTH;
+	tl.to("#holder", time, { x: x }, "+=.1");
+	tl.to("#holder", time, { x: x }, "+=2");
+	tl.to("#holder", time, { x: x }, "+=4");
+}
+
+exports.size = size;
+exports.init = init;
+exports.size320 = size320;
+exports.size728 = size728;
+
+// export {init}
+
+},{}],2:[function(require,module,exports){
+'use strict';
+
+var _commonJsCommonJs = require('../../_common/js/common.js');
+
+(0, _commonJsCommonJs.size320)();
 
 module.exports = {};
 

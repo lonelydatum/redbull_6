@@ -2,7 +2,7 @@ const banner = document.getElementById('banner')
 const size = {w:banner.offsetWidth, h:banner.offsetHeight}
 
 
-
+const speed = .1
 
 function init(id){
 
@@ -22,7 +22,7 @@ function init(id){
 	
 	const {w, h} = size
 
-	const time = .2
+	const time = speed
 	TweenLite.defaultEase = Power3.easeInOut
 	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
 	const x = `-=${size.w}`
@@ -34,5 +34,66 @@ function init(id){
 }
 
 
-export {size, init}
+
+function size728(){
+
+	const WIDTH = 320
+
+	const list = [".t1", ".t2", ".t3"]
+	list.map((item, i)=>{
+		TweenLite.set(item, {x:i*WIDTH})
+	})
+
+	TweenLite.set("#holder", {x:WIDTH})
+	TweenLite.set(".bg", {x:`-${size.w/2}`, y:`-${size.h/2}`})
+
+
+	TweenLite.defaultEase = Power3.easeOut
+	const tl = new TimelineMax()
+	tl.set(".frame1", {opacity:1})
+
+	
+	const {w, h} = size
+
+	const time = speed
+	TweenLite.defaultEase = Power3.easeInOut
+	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
+	const x = `-=${WIDTH}`
+	tl.to("#holder", time, {x}, "+=.1")
+	tl.to("#holder", time, {x}, "+=2")
+	tl.to("#holder", time, {x}, "+=4")
+	
+	return tl
+}
+
+function size320(){
+	const WIDTH = 140
+
+	const list = [".t1", ".t2", ".t3"]
+	list.map((item, i)=>{
+		TweenLite.set(item, {x:i*WIDTH})
+	})
+
+	TweenLite.set("#holder", {x:WIDTH})
+	TweenLite.set(".bg", {x:`-${size.w/2}`, y:`-${size.h/2}`})
+
+
+	TweenLite.defaultEase = Power3.easeOut
+	const tl = new TimelineMax()
+	tl.set(".frame1", {opacity:1})
+
+	
+	const {w, h} = size
+
+	const time = speed
+	TweenLite.defaultEase = Power3.easeInOut
+	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
+	const x = `-=${WIDTH}`
+	tl.to("#holder", time, {x}, "+=.1")
+	tl.to("#holder", time, {x}, "+=2")
+	tl.to("#holder", time, {x}, "+=4")
+	
+}
+
+export {size, init, size320, size728}
 // export {init}
