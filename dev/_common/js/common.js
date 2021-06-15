@@ -2,7 +2,9 @@ const banner = document.getElementById('banner')
 const size = {w:banner.offsetWidth, h:banner.offsetHeight}
 
 
-const speed = .1
+const speed = .2
+const F1 = 1.7
+const F2 = 3.2
 
 function init(id){
 
@@ -27,8 +29,8 @@ function init(id){
 	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
 	const x = `-=${size.w}`
 	tl.to("#holder", time, {x}, "+=.1")
-	tl.to("#holder", time, {x}, "+=2")
-	tl.to("#holder", time, {x}, "+=4")
+	tl.to("#holder", time, {x}, `+=${F1}`)
+	tl.to("#holder", time, {x}, `+=${F2}`)
 	
 	return tl
 }
@@ -60,8 +62,8 @@ function size728(){
 	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
 	const x = `-=${WIDTH}`
 	tl.to("#holder", time, {x}, "+=.1")
-	tl.to("#holder", time, {x}, "+=2")
-	tl.to("#holder", time, {x}, "+=4")
+	tl.to("#holder", time, {x}, `+=${F1}`)
+	tl.to("#holder", time, {x}, `+=${F2}`)
 	
 	return tl
 }
@@ -90,8 +92,8 @@ function size320(){
 	tl.from(".bg", .4, {scale:.7, opacity:0, ease:Power4.easeOut}, "+=.1")
 	const x = `-=${WIDTH}`
 	tl.to("#holder", time, {x}, "+=.1")
-	tl.to("#holder", time, {x}, "+=2")
-	tl.to("#holder", time, {x}, "+=4")
+	tl.to("#holder", time, {x}, `+=${F1}`)
+	tl.to("#holder", time, {x}, `+=${F2}`)
 	
 }
 

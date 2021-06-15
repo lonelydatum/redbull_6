@@ -7,7 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 var banner = document.getElementById('banner');
 var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
-var speed = .1;
+var speed = .2;
+var F1 = 1.7;
+var F2 = 3.2;
 
 function init(id) {
 
@@ -31,8 +33,8 @@ function init(id) {
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
 	var x = "-=" + size.w;
 	tl.to("#holder", time, { x: x }, "+=.1");
-	tl.to("#holder", time, { x: x }, "+=2");
-	tl.to("#holder", time, { x: x }, "+=4");
+	tl.to("#holder", time, { x: x }, "+=" + F1);
+	tl.to("#holder", time, { x: x }, "+=" + F2);
 
 	return tl;
 }
@@ -61,8 +63,8 @@ function size728() {
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
 	var x = "-=" + WIDTH;
 	tl.to("#holder", time, { x: x }, "+=.1");
-	tl.to("#holder", time, { x: x }, "+=2");
-	tl.to("#holder", time, { x: x }, "+=4");
+	tl.to("#holder", time, { x: x }, "+=" + F1);
+	tl.to("#holder", time, { x: x }, "+=" + F2);
 
 	return tl;
 }
@@ -90,8 +92,8 @@ function size320() {
 	tl.from(".bg", .4, { scale: .7, opacity: 0, ease: Power4.easeOut }, "+=.1");
 	var x = "-=" + WIDTH;
 	tl.to("#holder", time, { x: x }, "+=.1");
-	tl.to("#holder", time, { x: x }, "+=2");
-	tl.to("#holder", time, { x: x }, "+=4");
+	tl.to("#holder", time, { x: x }, "+=" + F1);
+	tl.to("#holder", time, { x: x }, "+=" + F2);
 }
 
 exports.size = size;
