@@ -4,7 +4,7 @@ const size = {w:banner.offsetWidth, h:banner.offsetHeight}
 
 const speed = .2
 const F1 = 1.7
-const F2 = 3.2
+const F2 = 2.5
 
 function init(id){
 

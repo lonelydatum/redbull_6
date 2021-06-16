@@ -9,7 +9,7 @@ var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
 var speed = .2;
 var F1 = 1.7;
-var F2 = 3.2;
+var F2 = 2.5;
 
 function init(id) {
 
